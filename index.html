@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptación de texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="encriptador.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@100..900&family=Roboto+Slab&family=Spectral:ital,wght@1,600;1,800&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div id="logo">
+                <img src="Logo.png">
+            </div>           
+        </header>
+        <main>
+            <div class="Contenedor">
+                <div class="izquierda">
+                    <textarea id="texto-encriptar" name="texto-encriptar" placeholder="Ingrese texto aquí" rows="20" cols="50" style="outline: none" autofocus></textarea>
+                    <p id="mensaje-validación"><svg xmlns="http://www.w3.org/2000/svg" width=0.8vw height=0.8vw fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                      </svg> Solo letras minisculas y sin acentos</p>  
+                    <button  onclick= "btnEncriptar()" id="btn-encriptar">Encriptar!</button>
+                    <button onclick= "btnDesencriptar()" id="btn-desencriptar">Desencriptar</button>   
+                </div>
+                <div class="derecha">
+                    <div class="desenc-inicio">
+                            <textarea id="texto-encriptado" name="texto-encriptado" style="outline: none" class="oculto" readonly></textarea>
+                            <img id="imgmuneco" src="Muñeco.png">
+                            <h2 id="mensaje">Ningun mensaje fué encontrado</h2>
+                            <p id="text-derecha">Ingresa el texto que deseas encriptar o desencriptar</p>
+                            <div class="copy"><button onclick= "copyText()" id="btn-copiar" class="oculto">Copiar</button></div>                        
+                    </div> 
+                </div>
+                <div id="custom-alert" class="oculto">
+                    <p>¡Texto copiado exitosamente!</p>
+                </div>                  
+            </div>
+        </main> 
+        <script src="encriptador3.js"></script>
+    </body>
+</html>
